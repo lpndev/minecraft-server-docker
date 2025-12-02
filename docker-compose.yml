@@ -28,6 +28,10 @@ services:
       ONLINE_MODE: false
       USE_AIKAR_FLAGS: true
       DIFFICULTY: 2
+      MODRINTH_PROJECTS: |
+        fabric-api
+        chunky
+        skinsrestorer
     volumes:
       - ./icon.png:/icon.png
       - ./minecraft-data:/data
