@@ -20,15 +20,27 @@ services:
     environment:
       EULA: true
       TYPE: FABRIC
+<<<<<<< HEAD
       MEMORY: 2G
       MAX_PLAYERS: 10
       MOTD: 14 days of gameplay
       ICON: /data/icon.png
+=======
+      MEMORY: 3G
+      MAX_PLAYERS: 10
+      MOTD: 14 dias de gameplay
+      ICON: /icon.png
+>>>>>>> 8690d88771ccf10416bd78be46b592f8cfc9db58
       OVERRIDE_ICON: true
       ONLINE_MODE: false
       USE_AIKAR_FLAGS: true
       DIFFICULTY: normal
+<<<<<<< HEAD
       RESOURCE_PACK: /data/ftf-pack.zip
+=======
+      SEED: "694821082227154559"
+      RESOURCE_PACK: https://cdn.modrinth.com/data/p1WH6sHr/versions/Tg5fQtVU/From-The-Fog-Data-Resource-Pack-1.21.9-1.21.10-v1.11.2.zip
+>>>>>>> 8690d88771ccf10416bd78be46b592f8cfc9db58
       RESOURCE_PACK_ENFORCE: true
       MODRINTH_PROJECTS: |
         fabric-api
