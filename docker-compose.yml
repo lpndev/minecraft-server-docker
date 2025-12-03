@@ -20,20 +20,27 @@ services:
     environment:
       EULA: true
       TYPE: FABRIC
-      MAX_MEMORY: 2G
+      MEMORY: 2G
       MAX_PLAYERS: 10
-      MOTD: "14 days of gameplay"
-      ICON: /icon.png
+      MOTD: 14 days of gameplay
+      ICON: /data/icon.png
       OVERRIDE_ICON: true
       ONLINE_MODE: false
       USE_AIKAR_FLAGS: true
-      DIFFICULTY: 2
+      DIFFICULTY: normal
+      RESOURCE_PACK: /data/ftf-pack.zip
+      RESOURCE_PACK_ENFORCE: true
       MODRINTH_PROJECTS: |
         fabric-api
         chunky
+        cloth-config
+        fabric-language-kotlin
+        fallingtree
+        from-the-fog
+        silk
         skinsrestorer
+        veinminer
     volumes:
-      - ./icon.png:/icon.png
       - ./minecraft-data:/data
     depends_on:
       - zerotier
