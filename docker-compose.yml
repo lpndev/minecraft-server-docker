@@ -1,18 +1,6 @@
 services:
-  zerotier:
-    image: zerotier/zerotier:latest
-    container_name: minecraft-zerotier
-    devices:
-      - /dev/net/tun
-    network_mode: host
-    cap_add:
-      - NET_ADMIN
-      - SYS_ADMIN
-    volumes:
-      - ./zerotier-data:/var/lib/zerotier-one
-
   minecraft:
-    image: itzg/minecraft-server:latest
+    image: itzg/minecraft-server
     container_name: minecraft-server
     network_mode: host
     tty: true
@@ -20,27 +8,24 @@ services:
     environment:
       EULA: true
       TYPE: FABRIC
-      MEMORY: 2G
-      MAX_PLAYERS: 10
-      MOTD: 14 days of gameplay
-      ICON: /data/icon.png
+      MEMORY: 4G
+      MAX_PLAYERS: 8
+      MOTD: Minecraft Server
+      ICON: https://placehold.co/600x400
       OVERRIDE_ICON: true
       ONLINE_MODE: false
       USE_AIKAR_FLAGS: true
-      DIFFICULTY: normal
-      RESOURCE_PACK: /data/ftf-pack.zip
-      RESOURCE_PACK_ENFORCE: true
+      VERSION: 1.21.10
+      DIFFICULTY: hard
       MODRINTH_PROJECTS: |
         fabric-api
+        c2me-fabric
         chunky
-        cloth-config
-        fabric-language-kotlin
         fallingtree
-        from-the-fog
-        silk
-        skinsrestorer
+        ferrite-core
+        krypton
+        lithium
+        spark
         veinminer
     volumes:
       - ./minecraft-data:/data
-    depends_on:
-      - zerotier
