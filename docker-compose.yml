@@ -9,23 +9,36 @@ services:
       EULA: true
       TYPE: FABRIC
       MEMORY: 4G
-      MAX_PLAYERS: 8
-      MOTD: Minecraft Server
-      ICON: https://placehold.co/600x400
+      MAX_PLAYERS: 10
+      MOTD: 14 dias de gameplay
+      ICON: https://files.catbox.moe/psewq0.jpg
       OVERRIDE_ICON: true
       ONLINE_MODE: false
       USE_AIKAR_FLAGS: true
       VERSION: 1.21.10
       DIFFICULTY: hard
+      RESOURCE_PACK: https://files.catbox.moe/74lpvx.zip
+      DATAPACKS: |
+        https://files.catbox.moe/yfava3.zip
+        https://files.catbox.moe/tg4cso.zip
+        https://files.catbox.moe/36wflb.zip
       MODRINTH_PROJECTS: |
         fabric-api
+        architectury-api
         c2me-fabric
         chunky
+        cloth-config
+        clumps
         fallingtree
         ferrite-core
+        inventory-sorting
         krypton
         lithium
+        packet-fixer
+        rei
+        scalablelux
+        servercore
+        skinrestorer
         spark
-        veinminer
     volumes:
       - ./minecraft-data:/data
